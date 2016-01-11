@@ -1,0 +1,47 @@
+{
+	"folders":	[
+		{
+			"path":	"src",
+			"name": "Source",
+			"folder_exclude_patterns":	[
+				"_old"
+			],
+			"file_exclude_patterns":	[
+				"*.*CST"
+			]
+		},
+		{
+			"path": "resources",
+			"name": "Resources",
+			"folder_exclude_patterns":	[
+				"_old"
+			],
+			"file_exclude_patterns":	[
+				"*.*CST"
+			]
+		},
+		{
+			"path":	".",
+			"name": "project files",
+			"folder_exclude_patterns":	[
+				"src",
+				"resources"
+			],
+			"file_exclude_patterns":	[
+				"*.sublime-workspace",
+				"*.dll"
+			]
+		}
+	],
+	
+	"build_systems": [
+		{
+			"name": "Build & Run",
+			"working_dir": "${project_path}",
+			"cmd": ["compile.sh"],
+			"windows": {
+				"cmd":	["compile.bat"]
+			}
+		}
+	]
+}
